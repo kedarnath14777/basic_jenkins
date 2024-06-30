@@ -1,5 +1,7 @@
 pipeline {
-    agent any 
+    agent {
+        label 'agent-1'
+    } 
     stages{
         stage ('Build'){
             steps{
@@ -11,7 +13,7 @@ pipeline {
                 echo "this is the test  stage"
             }
         }
-        stage ('uat'){
+        stage ('Deploy'){
             steps{
                 echo "this is the ust stage"
             }
